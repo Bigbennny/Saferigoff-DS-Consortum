@@ -1,5 +1,5 @@
 import React from 'react';
-import { Lock, ShieldCheck, Zap } from 'lucide-react';
+import { Lock, ShieldCheck, Zap, Gavel } from 'lucide-react';
 
 export const LegalSection = () => {
   const points = [
@@ -10,9 +10,14 @@ export const LegalSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-slate-50 border-y border-slate-200">
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="bg-white rounded-3xl p-12 shadow-sm border border-slate-200">
+    <section className="py-24 bg-slate-50 border-y border-slate-200 relative overflow-hidden">
+      {/* Background Watermark */}
+      <div className="absolute top-0 right-0 w-full h-full pointer-events-none z-0">
+        <Gavel className="absolute -top-24 -right-24 w-[400px] h-[400px] text-slate-900 opacity-[0.02]" />
+      </div>
+
+      <div className="max-w-5xl mx-auto px-6 relative z-10">
+        <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-12 shadow-sm border border-slate-200">
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="md:w-1/3 text-center md:text-left">
               <div className="w-20 h-20 bg-slate-100 rounded-2xl flex items-center justify-center mb-6 mx-auto md:mx-0">

@@ -14,15 +14,15 @@ export const LEADERSHIP: Leader[] = [
     name: "Matthew Onyekwere Okorie",
     role: "Founder & Chief Innovation Director",
     description: "Matthew leads strategy and innovation design for the consortium. He has extensive experience across telecommunications, oil & gas, the stock market, and enterprise digital systems. He focuses on helping organizations navigate complex product ideation and governance frameworks.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&h=400&q=80",
+    image: "https://i.ibb.co/zKqCCSv/matthew-okorie.jpg",
     altText: "Matthew Onyekwere Okorie"
   },
   {
-    name: "Chukwuemeka Reuben Ogbuani",
-    role: "CEO & Chief Systems Architect",
-    description: "Chukwuemeka is a senior software engineer with leadership experience in the aviation sector and international institutional environments, including the United Nations. He leads the technical architecture and systems engineering arm of the consortium.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400&q=80",
-    altText: "Chukwuemeka Reuben Ogbuani"
+    name: "Reuben Chukwuemeka Ogbuani",
+    role: "MD/CEO",
+    description: "Reuben is a senior software engineer with leadership experience in the aviation sector and international institutional environments, including the United Nations. He leads the technical architecture and systems engineering arm of the consortium.",
+    image: "https://i.ibb.co/tpV2Kn4X/New-Profile-Pix-2.png",
+    altText: "Reuben Chukwuemeka Ogbuani"
   }
 ];
 
@@ -76,5 +76,8 @@ export const INDUSTRIES = [
   "Telecommunications",
   "Aviation & Transportation",
   "Energy & Infrastructure",
+  "Tourism & Hospitality",
+  "Fintech Advisory",
+  "Agriculture Advisory",
   "Platform-Based Businesses"
 ];

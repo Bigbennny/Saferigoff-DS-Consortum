@@ -1,13 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import { CheckCircle, Layers, Workflow, Target, Zap, Shield, Search, Settings } from 'lucide-react';
 import { SectionHeading } from './SectionHeading';
 import { PHASES } from '../constants';
 
 export const Approach = () => {
   return (
-    <section id="approach" className="py-24 bg-slate-50 scroll-mt-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="approach" className="py-24 bg-slate-50 scroll-mt-24 relative overflow-hidden">
+      {/* Background Watermark Pattern */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-[0.03]">
+        <Layers className="absolute -top-12 -left-12 w-64 h-64 text-slate-900 rotate-12" />
+        <Workflow className="absolute top-1/4 left-1/3 w-48 h-48 text-slate-900 -rotate-6" />
+        <Target className="absolute top-10 right-1/4 w-56 h-56 text-slate-900 rotate-45" />
+        <Zap className="absolute bottom-1/4 left-10 w-40 h-40 text-slate-900 -rotate-12" />
+        <Shield className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 text-slate-900 opacity-[0.4]" />
+        <Search className="absolute bottom-10 right-1/3 w-32 h-32 text-slate-900 rotate-12" />
+        <Settings className="absolute -bottom-16 -right-16 w-80 h-80 text-slate-900 -rotate-45" />
+        <Layers className="absolute top-1/3 right-10 w-44 h-44 text-slate-900 rotate-[30deg]" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <SectionHeading subtitle="Our Methodology" title="A Disciplined Consulting Approach" centered />
           <p className="text-slate-600 text-lg">
@@ -23,7 +35,7 @@ export const Approach = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 relative z-10 h-full flex flex-col"
+              className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-sm border border-slate-100 relative z-10 h-full flex flex-col hover:shadow-md transition-shadow"
             >
               <div className="w-12 h-12 bg-slate-900 text-[#c5a059] flex items-center justify-center rounded-2xl font-bold text-xl mb-6 shadow-xl">
                 0{idx + 1}

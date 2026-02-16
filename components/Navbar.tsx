@@ -29,11 +29,11 @@ export const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <div className="flex flex-col">
-          <span className={`font-medium tracking-tighter text-xl transition-colors duration-300 ${brandColor}`}>
-            SAFERIGOFF
+          <span className={`font-bold tracking-tighter text-lg leading-tight transition-colors duration-300 ${brandColor}`}>
+            SAFERIGOFF-DIGITAL SOLUTIONS
           </span>
-          <span className={`text-[10px] uppercase tracking-widest font-normal transition-colors duration-300 ${scrolled ? 'text-slate-500' : 'text-slate-400'}`}>
-            Digital Solutions Consortium
+          <span className={`text-[9px] uppercase tracking-[0.3em] font-medium transition-colors duration-300 ${scrolled ? 'text-[#c5a059]' : 'text-[#c5a059]'}`}>
+            CONSORTIUM
           </span>
         </div>
 

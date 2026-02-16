@@ -1,10 +1,12 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+// Added Variants import to fix type inference errors
+import { motion, Variants } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { PILLARS } from '../constants';
 
 export const Hero = () => {
-  const containerVariants = {
+  // Added Variants type to ensure property compatibility
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -15,12 +17,13 @@ export const Hero = () => {
     },
   };
 
-  const itemVariants = {
+  // Added Variants type and cast custom ease array to any to resolve easing type mismatch
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] },
+      transition: { duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] as any },
     },
   };
 
@@ -48,14 +51,14 @@ export const Hero = () => {
         >
           <motion.span 
             variants={itemVariants}
-            className="inline-block px-3 py-1 bg-[#c5a059]/20 text-[#c5a059] text-[10px] font-medium uppercase tracking-widest rounded-full mb-8 border border-[#c5a059]/30"
+            className="inline-block px-3 py-1 bg-[#c5a059]/20 text-[#c5a059] text-[10px] font-medium uppercase tracking-[0.2em] rounded-full mb-8 border border-[#c5a059]/30"
           >
-            Digital Solutions Consulting Consortium
+            Saferigoff-Digital Solutions Consortium
           </motion.span>
           
           <motion.h1 
             variants={itemVariants}
-            className="text-4xl md:text-6xl lg:text-[5.5rem] font-medium leading-[0.95] mb-10 tracking-wide"
+            className="text-4xl md:text-6xl lg:text-[5.5rem] font-medium leading-snug md:leading-tight lg:leading-[0.95] mb-10 tracking-wide"
           >
             Strategic Innovation & Digital Product Consulting for <span className="text-[#c5a059]">Global Enterprises</span>
           </motion.h1>

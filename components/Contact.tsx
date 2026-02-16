@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, ArrowRight } from 'lucide-react';
-import { SectionHeading } from './SectionHeading';
 
 export const Contact = () => {
   return (
@@ -25,7 +24,9 @@ export const Contact = () => {
           
           <div className="grid lg:grid-cols-2 gap-20 relative z-10">
             <div>
-              <SectionHeading subtitle="Connect" title="Engage With the Consortium" />
+              <div className="mb-12">
+                <span className="text-[#c5a059] font-bold uppercase tracking-widest text-sm mb-2 block">Connect</span>
+              </div>
               <motion.p 
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
